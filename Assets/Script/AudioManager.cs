@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class AudioManager : MonoBehaviour
@@ -9,6 +10,11 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
+
+    [SerializeField] Image sfxOn;
+    [SerializeField] Image sfxOff;
+    [SerializeField] Image musicOn;
+    [SerializeField] Image musicOff;
 
     private void Awake()
     {
@@ -54,6 +60,58 @@ public class AudioManager : MonoBehaviour
         else
         {
             sfxSource.PlayOneShot(s.clip);
+        }
+    }
+
+    public void ToogleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+        UpdateButtonMusic();
+    }
+
+    public void ToogleSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+        UpdateButtonSFX();
+    }
+
+    public void MusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
+    }
+
+    private void UpdateButtonMusic()
+    {
+        if (musicSource.mute == false)
+        {
+            musicOn.enabled = true;
+            musicOff.enabled = false;
+        }
+
+        else
+        {
+            musicOn.enabled = false;
+            musicOff.enabled = true;
+        }
+    }
+
+    private void UpdateButtonSFX()
+    {
+        if (sfxSource.mute == false)
+        {
+            sfxOn.enabled = true;
+            sfxOff.enabled = false;
+        }
+
+        else
+        {
+            sfxOn.enabled = false;
+            sfxOff.enabled = true;
         }
     }
 }

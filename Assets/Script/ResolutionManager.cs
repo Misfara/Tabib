@@ -39,12 +39,14 @@ public class ResolutionManager : MonoBehaviour
     {
         SelectedResolution = ResDropdown.value;
         Screen.SetResolution(SelectedResolutionList[SelectedResolution].width, SelectedResolutionList[SelectedResolution].height, IsFullScreen);
+        AudioManager.Instance.PlaySFX("Button");
     }
 
     public void ChangeFullScreen()
     {
         IsFullScreen = FullScreenToggle.isOn;
         Screen.SetResolution(SelectedResolutionList[SelectedResolution].width, SelectedResolutionList[SelectedResolution].height, IsFullScreen);
+        AudioManager.Instance.PlaySFX("Button");
     }
 
     // Update is called once per frame

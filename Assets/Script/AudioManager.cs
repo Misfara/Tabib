@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Image sfxOff;
     [SerializeField] Image musicOn;
     [SerializeField] Image musicOff;
+    
 
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.clip = s.clip;
             musicSource.Play();
+            UpdateButtonMusic();
         }
     }
 
@@ -60,6 +62,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             sfxSource.PlayOneShot(s.clip);
+            UpdateButtonSFX();
         }
     }
 

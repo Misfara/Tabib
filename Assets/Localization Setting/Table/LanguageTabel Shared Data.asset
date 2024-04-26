@@ -43,6 +43,22 @@ MonoBehaviour:
     m_Key: Language Text
     m_Metadata:
       m_Items: []
+  - m_Id: 138481738039296
+    m_Key: FullScreen Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143054577975296
+    m_Key: Load Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144585477963776
+    m_Key: Delete Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144805435654144
+    m_Key: Back Button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

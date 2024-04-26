@@ -12,6 +12,7 @@ public class LanguageSetting : MonoBehaviour
         if (active == true)
             return;
         StartCoroutine(SetLanguage(LanguageID));
+        AudioManager.Instance.PlaySFX("Button");
     }
 
     IEnumerator SetLanguage(int _LanguageID)

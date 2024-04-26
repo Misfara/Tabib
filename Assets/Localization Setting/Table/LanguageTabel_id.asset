@@ -46,6 +46,22 @@ MonoBehaviour:
     m_Localized: Bahasa
     m_Metadata:
       m_Items: []
+  - m_Id: 138481738039296
+    m_Localized: Layar Penuh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143054577975296
+    m_Localized: Mainkan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144585477963776
+    m_Localized: Hapus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144805435654144
+    m_Localized: Kembali
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

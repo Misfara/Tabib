@@ -7,14 +7,15 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject Option;
 
+        //START MENU//
     public void StartGame(){
         SceneManager.LoadScene("InGame");
         AudioManager.Instance.musicSource.Stop();
         AudioManager.Instance.PlaySFX("Button");
     }
 
-    public void QuitGame(){
-        Application.Quit();
+    public void LoadGame(){
+        SceneManager.LoadScene("LoadGame");
         AudioManager.Instance.PlaySFX("Button");
     }
 
@@ -23,10 +24,24 @@ public class NewBehaviourScript : MonoBehaviour
         if (Option.activeInHierarchy == false)
         {
             Option.SetActive(true);
+            AudioManager.Instance.PlaySFX("Button");
         }
         else
         {
             Option.SetActive(false);
+            AudioManager.Instance.PlaySFX("Button");
         }
+    }
+
+    public void QuitGame(){
+        Application.Quit();
+        AudioManager.Instance.PlaySFX("Button");
+    }
+
+    
+    //LOAD MENU//
+    public void StartMenu(){
+        SceneManager.LoadScene("StartScreen");
+        AudioManager.Instance.PlaySFX("Button");
     }
 }

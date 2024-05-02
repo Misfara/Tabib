@@ -9,14 +9,26 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject LoadingScreen;
     public Slider progressSlider;
     public GameObject Option;
+    public GameObject PlayerName;
 
         //START MENU//
-    public void StartGame(int index)
+    public void StartGame()
     {
-        StartCoroutine(LoadScene_Coroutine(index));
-        // SceneManager.LoadScene("InGame");
-        AudioManager.Instance.musicSource.Stop();
-        AudioManager.Instance.PlaySFX("Button");
+        if (PlayerName.activeInHierarchy == false)
+        {
+            PlayerName.SetActive(true);
+            AudioManager.Instance.PlaySFX("Button");
+        }
+        else
+        {
+            PlayerName.SetActive(false);
+            AudioManager.Instance.PlaySFX("Button");
+        }
+        // PlayerName.SetActive(true);
+        // StartCoroutine(LoadScene_Coroutine(index));
+        // // SceneManager.LoadScene("InGame");
+        // AudioManager.Instance.musicSource.Stop();
+        // AudioManager.Instance.PlaySFX("Button");
     }
 
     public void LoadGame(){
